@@ -9,7 +9,7 @@
 <h2>Ask for advice about your favorite roast:</h2>
 <p />
 <form action = "advice" method="post">
-	<select name="roast.key"   >
+	<select name="roastKey"   >
 		<option>--Select Roast--</option>
 	  		<c:forEach var="roast" items="${roasts}">
 	    		<option value="${roast.key}" > ${roast.value}</option>

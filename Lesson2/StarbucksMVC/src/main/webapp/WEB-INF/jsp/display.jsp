@@ -9,7 +9,7 @@
 <title>Starbuck's</title>
 </head>
 <body>
-	<h2>Starbuck's ${param["roast"]} Roast Coffees:</h2>
+	<h2>Starbuck's ${roast} Roast Coffees:</h2>
 	<form action="advice" method="get">
  		
 <table >

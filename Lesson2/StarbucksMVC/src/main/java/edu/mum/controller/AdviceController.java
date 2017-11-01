@@ -23,8 +23,9 @@ public class AdviceController {
 	}
 	
 	@RequestMapping(value="/advice", method=RequestMethod.POST)
-	public String advicePost(Integer key, Model model){
-		String roast = adviceService.getRoast(key);
+	public String advicePost(Integer roastKey, Model model){
+		System.out.println(roastKey);
+		String roast = adviceService.getRoast(roastKey);
 		List<String> list = adviceService.getListByType(roast);
 		model.addAttribute("roast", roast);
 		model.addAttribute("list", list);

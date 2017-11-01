@@ -22,8 +22,8 @@ public class UserController {
 	@RequestMapping(value="/login", method=RequestMethod.POST)
 	public String authenticate(User user) throws Exception{
 		User logedUser = userService.findByName(user.getName());
-		if(logedUser == null || logedUser.getPassword().equals(user.getPassword()))
+		if(logedUser == null || !logedUser.getPassword().equals(user.getPassword()))
 			throw new RuntimeException("Username or Password is invalid");
-		return "loginSuccessful";
+		return "LoginSuccessful";
 	}
 }
