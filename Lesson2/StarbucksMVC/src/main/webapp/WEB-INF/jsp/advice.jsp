@@ -8,11 +8,11 @@
 <body>
 <h2>Ask for advice about your favorite roast:</h2>
 <p />
-<form action = "advice.do" method="post">
-<select name="roast"   >
-
+<form action = "advice" method="post">
+	<select name="roast.key"   >
+		<option>--Select Roast--</option>
 	  		<c:forEach var="roast" items="${roasts}">
-	    		<option value="${roast.value}" > ${roast.key}</option>
+	    		<option value="${roast.key}" > ${roast.value}</option>
 			</c:forEach>
 
 </select>
