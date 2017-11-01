@@ -1,8 +1,11 @@
 package mum.edu.service.impl;
 
+import org.springframework.stereotype.Service;
+
 import mum.edu.domain.Calculator;
 import mum.edu.service.CalculatorService;
 
+@Service
 public class CalculatorServiceImpl implements CalculatorService{
 
 	@Override
