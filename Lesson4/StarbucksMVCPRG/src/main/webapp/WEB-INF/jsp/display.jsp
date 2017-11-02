@@ -9,6 +9,7 @@
 <title>Starbuck's</title>
 </head>
 <body>
+	<h4>Hi ${user.name }</h4>
 	<h2>Starbuck's ${roast} Roast Coffees:</h2>
 	<form action="advice" method="get">
  		
