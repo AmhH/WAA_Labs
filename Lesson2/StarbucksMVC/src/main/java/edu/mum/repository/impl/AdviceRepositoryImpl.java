@@ -13,7 +13,7 @@ import edu.mum.repository.AdviceRepository;
 public class AdviceRepositoryImpl implements AdviceRepository {
 
 	@Autowired
-	Database database;
+	private  Database database;
 	
 	@Override
 	public List<String> getListByType(String type) {

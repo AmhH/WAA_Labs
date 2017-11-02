@@ -14,7 +14,7 @@ import edu.mum.service.AdviceService;
 public class AdviceController {
 
 	@Autowired
-	AdviceService adviceService;
+	private AdviceService adviceService;
 	
 	@RequestMapping(value="/advice", method=RequestMethod.GET)
 	public String adviceForm(Model model){

@@ -13,7 +13,7 @@ import edu.mum.service.AdviceService;
 public class AdviceServiceImpl implements AdviceService{
 
 	@Autowired
-	AdviceRepository adviceRepository;
+	private AdviceRepository adviceRepository;
 	
 	@Override
 	public List<String> getListByType(String type) {

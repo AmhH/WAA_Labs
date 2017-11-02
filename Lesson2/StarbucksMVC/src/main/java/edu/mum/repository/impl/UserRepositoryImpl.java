@@ -13,7 +13,7 @@ import edu.mum.repository.UserRepository;
 public class UserRepositoryImpl implements UserRepository {
 
 	@Autowired
-	Database database;
+	private Database database;
 	
 	@Override
 	public List<User> getAll() {

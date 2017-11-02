@@ -12,7 +12,7 @@ import edu.mum.service.UserService;
 public class UserController {
 	
 	@Autowired
-	UserService userService;
+	private UserService userService;
 	
 	@RequestMapping(value={"/","/login"}, method=RequestMethod.GET)
 	public String getLogin(){
