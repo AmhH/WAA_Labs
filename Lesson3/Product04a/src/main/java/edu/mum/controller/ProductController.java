@@ -33,7 +33,7 @@ public class ProductController {
 	}
  	
     @RequestMapping(value={"/","/product"}, method = RequestMethod.GET)
-    public String inputProduct(Model model) {
+    public String inputProduct(@ModelAttribute("newProduct") Product product, Model model) {
  
         List<Category> categories = categoryService.getAll();
         model.addAttribute("categories", categories);
@@ -43,27 +43,19 @@ public class ProductController {
 
 
 	@RequestMapping(value="/product", method = RequestMethod.POST)
-     public String saveProduct(@ModelAttribute("newProduct") Product product ) {
+     public String saveProduct(@ModelAttribute("newProduct") Product product, Model model ) {
 
-/*  Replace method declaration with:
-    	// The following will crash and burn because No Product to bind in signature
-        public String saveProduct(Model model ) {
-    	Product product = new Product();
-    	model.addAttribute(product);
-*/  
     	Category category = categoryService.getCategory(product.getCategory().getId());
         product.setCategory(category);
 
     	productService.save(product);
-    	
+    	model.addAttribute("product", product);
         return "ProductDetails";
     }
     
     
     @RequestMapping(value="/listproducts")
     public String listProducts(Model model ) {
-    	
-    	
 		List<Product> list = productService.getAll();
 		model.addAttribute("products",  list);
     	

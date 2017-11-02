@@ -15,35 +15,28 @@
     <fieldset>
         <legend>Add a product</legend>
         <p>
-            <label for="category">Category </label>
- 		 	<form:select path="category.id">
-		    	<option value="-">  --Select Category-- </option>
-		
-		  		<c:forEach var="category" items="${categories}">
-		    		<option value="${category.id}" > ${category.name}</option>
-				</c:forEach>
+            <label for="category"><spring:message code="product.category"/></label>
+ 		 	<form:select id="category" path="category.id">
+		    	<form:option value="0" label="--Select Category--"/>
+				<form:options items="${categories}" itemLabel="name" itemValue="id"/>
 		    </form:select>
         </p>
          
         <p>
-            <label for="name">Product Name: </label>
-            <input type="text" id="name" name="name" 
-                tabindex="1">
+            <label for="name"><spring:message code="product.name"/> </label>
+            <form:input id="name" path="name" />
         </p>
         <p>
-            <label for="description">Description: </label>
-            <input type="text" id="description" value= "${product.description}"
-                name="description" tabindex="2">
+            <label for="description"><spring:message code="product.description"/> </label>
+            <form:input  path="description" />
         </p>
         <p>
-            <label for="price">Price: </label>
-            <input type="text" id="price" name="price" 
-                tabindex="3">
+            <label for="price"><spring:message code="product.price"/> </label>
+            <form:input id="price" path="price" />
         </p>
         <p id="buttons">
-            <input id="reset" type="reset" tabindex="4">
-            <input id="submit" type="submit" tabindex="5" 
-                value="Add Product">
+            <input id="reset" type="<spring:message code="product.reset"/>" />
+            <input id="submit" type="submit" value="<spring:message code="product.submit"/>"/>
         </p>
     </fieldset>
 </form:form>
