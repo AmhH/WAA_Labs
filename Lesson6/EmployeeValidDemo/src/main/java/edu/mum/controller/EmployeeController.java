@@ -49,10 +49,8 @@ public class EmployeeController {
 		
 		if(image!=null && !image.isEmpty()){
 			try{
-				System.out.println("hello +++===="+rootDirectory);
-				image.transferTo(new File(rootDirectory+"/images/"+employee.getId()+".png"));
+				image.transferTo(new File(rootDirectory+"/images/"+employee.getId()+".png"));				
 				
-				//System.out.println("===>"+(new File(rootDirectory="\\images\\"+employee.getId()+".png")).toString());
 			} catch (Exception e) {
 				throw new FileNotFoundException("unable to save image: "+ image.getOriginalFilename());
 			}
