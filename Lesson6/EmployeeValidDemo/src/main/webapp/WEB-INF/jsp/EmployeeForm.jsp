@@ -8,7 +8,7 @@
 <link rel="stylesheet" type="text/css" href="<c:url value="/css/main.css"/>">
 </head>
 <body>
-
+	<a href="?language=en">English</a> | <a href="?language=it">Italian</a>
 	<div id="global">
 		<form:form commandName="employee" action="employee_save" method="post" enctype="multipart/form-data">
 			<fieldset>
