@@ -12,9 +12,9 @@ function makeAjaxCall(){
 		success: function(employee) {
 			$('#formInput').html("");
 			$("#formInput").append( '<H3 align="center"> New Employee Information <H3>');                
-			$('#formInput').append("<H4 align='center'>First Name:  " +   + "</h4>"  );
-			$('#formInput').append("<H4 align='center'>Last Name: " +   + "</h4>" );
-			$('#formInput').append("<H4 align='center'>Email: " +   + "</h4>");
+			$('#formInput').append("<H4 align='center'>First Name:  " + employee.firstName  + "</h4>"  );
+			$('#formInput').append("<H4 align='center'>Last Name: " + employee.lastName  + "</h4>" );
+			$('#formInput').append("<H4 align='center'>Email: " +  employee.email + "</h4>");
 			$("#formInput").append('<h4 align="center"> <a href="#" onclick="toggle_visibility(\'formInput\');resetForm(\'employeeForm\');"><b>EXIT</b> </a> </h4>');
 			/*$("#formInput").show();
 			$("#formInput").hide();*/
