@@ -35,7 +35,7 @@ public class Employee implements Serializable {
 	@NotNull
 	private Integer salaryLevel;
 
-	MultipartFile image;
+	private MultipartFile image;
 	@Valid
 	private Address address;
 
