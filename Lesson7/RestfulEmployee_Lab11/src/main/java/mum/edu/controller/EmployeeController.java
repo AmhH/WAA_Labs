@@ -12,10 +12,10 @@ import mum.edu.domain.Employee;
 import mum.edu.exception.EmployeeException;
  
 @Controller
-@RequestMapping({"/","/employee"})
+//@RequestMapping({"/","/employee"})
 public class EmployeeController {
 	
-	@RequestMapping(value="/", method=RequestMethod.GET)
+	@RequestMapping(value={"/","/employee"}, method=RequestMethod.GET)
 	public String display(){
 		return "employee";
 	}

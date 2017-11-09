@@ -2,9 +2,9 @@
 function makeAjaxCall(){
 	let sendTO = JSON.stringify(serializeObject($('#employeeForm')));
 	let contextRoot = "/" + window.location.pathname.split('/')[1];
-	
+	console.log('hola ===>'+contextRoot);
 	$.ajax({
-		url: contextRoot + 'employee/add',
+		url: contextRoot+'/add',
 		type: 'POST',
 		dataType: "json",
 		data: sendTO,
@@ -16,10 +16,10 @@ function makeAjaxCall(){
 			$('#formInput').append("<H4 align='center'>Last Name: " +   + "</h4>" );
 			$('#formInput').append("<H4 align='center'>Email: " +   + "</h4>");
 			$("#formInput").append('<h4 align="center"> <a href="#" onclick="toggle_visibility(\'formInput\');resetForm(\'employeeForm\');"><b>EXIT</b> </a> </h4>');
-			$("#formInput").show();
-			$("#formInput").hide();
-			/*make_visible('formInput');
-			make_hidden('errors');*/
+			/*$("#formInput").show();
+			$("#formInput").hide();*/
+			make_visible('formInput');
+			make_hidden('errors');
 		},
 
 		error: function(jqXHR, textStatus, exception){	
