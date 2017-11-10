@@ -37,6 +37,7 @@
             <prop key="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</prop>
             <prop key="hibernate.hbm2ddl.import_file">populate.sql</prop>
          </props>
+         
       </property>
    </bean>
  
