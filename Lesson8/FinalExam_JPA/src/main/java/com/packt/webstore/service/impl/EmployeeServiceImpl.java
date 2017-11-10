@@ -3,11 +3,13 @@ package com.packt.webstore.service.impl;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import com.packt.webstore.domain.Employee;
 import com.packt.webstore.repository.EmployeeRepository;
 import com.packt.webstore.service.EmployeeService;
 
+@Service
 public class EmployeeServiceImpl implements EmployeeService {
 
 	@Autowired

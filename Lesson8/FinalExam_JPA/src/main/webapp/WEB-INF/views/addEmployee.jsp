@@ -43,7 +43,7 @@
 					<label class="control-label col-lg-2" for="lastName">Last Name</label>
 					<div class="col-lg-10">
 						<div class="form:input-prepend">
-							<form:input id="lastName" path="firstName" type="text" class="form:input-large"/>
+							<form:input id="lastName" path="lastName" type="text" class="form:input-large"/>
 							<form:errors path="lastName" cssClass="text-danger"/>
 						</div>
 					</div>
