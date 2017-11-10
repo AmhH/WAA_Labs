@@ -33,10 +33,10 @@ public class EmployeeController {
 	
   	@RequestMapping("/employee")
 	public String getEmployeeByNumber(Model model, @RequestParam("id") int employeeId) {
-
+  		
   		// Replace
   		Employee employee = employeeService.findByEmployeeNumber(employeeId);
-  		
+  		System.out.println("++++=====>"+employee.getFirstName());
   		model.addAttribute("employee", employee);
 		return "employee";
 	}

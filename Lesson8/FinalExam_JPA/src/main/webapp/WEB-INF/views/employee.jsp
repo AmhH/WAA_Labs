@@ -23,7 +23,7 @@
 
 	<section class="container">
 		<div class="row">
-			<c:forEach items="${employees}" var="employee">
+			<%-- <c:forEach items="${employees}" var="employee"> --%>
 				<div class="col-sm-6 col-md-3" style="padding-bottom: 15px">
 					<div class="thumbnail">
  						<div class="caption">
@@ -33,17 +33,17 @@
 							<p>Title -       ${employee.title} </p>
 							<p>NUMBER -      ${employee.employeeNumber} </p>
 							<p>
-								<a
+								<%-- <a
 									href=" <spring:url value="/employees/employee?id=${employee.employeeNumber}" /> "
 									class="btn btn-primary"> <span
 									class="glyphicon-info-sign glyphicon" /></span> Details
-								</a>
+								</a> --%>
 							</p>
 
 						</div>
 					</div>
 				</div>
-			</c:forEach>
+			<%-- </c:forEach> --%>
 		</div>
 	</section>
 </body>
