@@ -15,11 +15,12 @@
  
  <jpa:repositories base-package="com.packt.webstore.repository" />
  	
-   <bean id="entityManager" class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
-      <property name="dataSource" ref="dataSource" />
-      <property name="packagesToScan" value="com.packt.webstore.domain" />
-      <property name="jpaVendorAdapter">
-         <bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter" />
+   <bean id="entityManagerFactory"
+		class="org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean">
+		<property name="dataSource" ref="dataSource" />
+		<property name="packagesToScan" value="com.packt.webstore.domain" />
+		<property name="jpaVendorAdapter">
+			<bean class="org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter" />
       </property>
       
        <!-- 
@@ -51,7 +52,7 @@
 
  
    <bean id="transactionManager" class="org.springframework.orm.jpa.JpaTransactionManager">
-      <property name="entityManagerFactory" ref="entityManager" />
+		<property name="entityManagerFactory" ref="entityManagerFactory" />
    </bean>
    
    <!-- Scan for  transaction-based resources -->
@@ -63,6 +64,5 @@
  
    <bean id="persistenceExceptionTranslationPostProcessor"
       class="org.springframework.dao.annotation.PersistenceExceptionTranslationPostProcessor" />
-   <jpa:repositories base-package="edu.mum.repository" />
  
 </beans>

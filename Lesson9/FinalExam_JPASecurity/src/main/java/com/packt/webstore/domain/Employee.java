@@ -23,10 +23,10 @@ public class Employee {
  
 	private int employeeNumber;
 	@OneToOne(cascade= CascadeType.ALL)
-	@JoinColumn(name="addressid")
+	//@JoinColumn(name="addressid")
 	private Address address;
 	@OneToOne
-	@JoinColumn(name="username")
+	//@JoinColumn(name="username")
 	private Credential credential;
 	
  	public Address getAddress() {
